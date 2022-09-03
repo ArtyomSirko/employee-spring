@@ -46,4 +46,11 @@ public class EmployeeServiceImpl implements EmployeeService {
   public Map<Integer, List<Employee>> findAllEmployee(){
         return employeeBook.values().stream().collect(Collectors.groupingBy(e -> e.getDepartment()));
 }
+
+    @Override
+    public List<Employee>  findAllEmployeeDepartment(Integer departmentId) {
+        return employeeBook.values().stream().filter(e -> e.getDepartment() == departmentId)
+                .collect(Collectors.toList());
+
+    }
 }
