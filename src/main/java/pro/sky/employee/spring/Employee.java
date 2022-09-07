@@ -16,7 +16,7 @@ import java.util.Objects;
         return name;
     }
 
-    public int getDepartment() {
+     public int getDepartment() {
         return department;
     }
 

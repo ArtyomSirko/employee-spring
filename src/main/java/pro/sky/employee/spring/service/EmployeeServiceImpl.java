@@ -1,6 +1,10 @@
 package pro.sky.employee.spring.service;
 
+import org.apache.commons.lang3.StringUtils;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.HttpClientErrorException;
 import pro.sky.employee.spring.Employee;
 
 import java.util.Comparator;
@@ -52,5 +56,16 @@ public class EmployeeServiceImpl implements EmployeeService {
         return employeeBook.values().stream().filter(e -> e.getDepartment() == departmentId)
                 .collect(Collectors.toList());
 
+    }
+
+    @Override
+    public Employee addEmployee(String name, Integer departmentId, Integer salary) {
+        StringUtils.capitalize(name);
+        if (StringUtils.containsNone(name,"0123456789+-*/!@#$%^&*()_+=")) {
+            System.out.println("this gooood!");
+            return employeeBook.put(name, new Employee(name, departmentId, salary));
+        } else System.out.println("this BADDD");
+            new ResponseEntity(HttpStatus.BAD_REQUEST);
+        return null;
     }
 }

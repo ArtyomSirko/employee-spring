@@ -14,5 +14,7 @@ public interface EmployeeService {
     Map<Integer, List<Employee>> findAllEmployee();
 
 
-    List<Employee>  findAllEmployeeDepartment(Integer departmentId);
+    List<Employee> findAllEmployeeDepartment(Integer departmentId);
+
+    Employee addEmployee(String name, Integer departmentId, Integer salary);
 }
