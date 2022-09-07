@@ -36,5 +36,17 @@ public class EmployeeController {
     public Map<Integer, List<Employee>> allEmployee() {
         return employeeService.findAllEmployee();
     }
+
+    @GetMapping("/allDepartment")
+    public List<Employee> allEmployeeDepartment(@RequestParam("departmentId") Integer departmentId) {
+        return employeeService.findAllEmployeeDepartment(departmentId);
+    }
+
+    @GetMapping("/add")
+    public Employee addEmployer(@RequestParam("name") String name,
+                                @RequestParam("departmentId") Integer departmentId,
+                                @RequestParam("salary") Integer salary) {
+        return employeeService.addEmployee(name, departmentId, salary);
+    }
 }
 

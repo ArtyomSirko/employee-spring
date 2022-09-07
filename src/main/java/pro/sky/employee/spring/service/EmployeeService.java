@@ -12,4 +12,9 @@ public interface EmployeeService {
     Employee findEmployeeMinSalary(Integer departmentId);
 
     Map<Integer, List<Employee>> findAllEmployee();
+
+
+    List<Employee> findAllEmployeeDepartment(Integer departmentId);
+
+    Employee addEmployee(String name, Integer departmentId, Integer salary);
 }
