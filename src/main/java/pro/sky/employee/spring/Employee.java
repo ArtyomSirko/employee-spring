@@ -3,7 +3,7 @@ package pro.sky.employee.spring;
 import java.util.Objects;
  public class Employee {
     private String name;
-    private int department;
+    private  int department;
     private int salary;
 
     public Employee(String name, int department, int salary) {

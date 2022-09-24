@@ -2,19 +2,22 @@ package pro.sky.employee.spring.service;
 
 import pro.sky.employee.spring.Employee;
 
+import java.util.Collection;
 import java.util.List;
 import java.util.Map;
 
 public interface EmployeeService {
 
-    Employee findEmployeeMaxSalary(Integer departmentId);
 
-    Employee findEmployeeMinSalary(Integer departmentId);
+    Map<Integer, List<Employee>> findAllEmployeesByDepartments();
 
-    Map<Integer, List<Employee>> findAllEmployee();
-
-
-    List<Employee> findAllEmployeeDepartment(Integer departmentId);
 
     Employee addEmployee(String name, Integer departmentId, Integer salary);
+
+
+    Employee removeEmployeeByKey(String key);
+
+    Map<String, Employee> findAllEmployees();
+
+    Collection<Employee> findAllEmployeesToCollection();
 }
