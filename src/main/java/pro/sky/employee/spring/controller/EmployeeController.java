@@ -16,25 +16,30 @@ import java.util.Map;
 public class EmployeeController {
     private final EmployeeService employeeService;
 
-
     public EmployeeController(EmployeeService employeeService) {
         this.employeeService = employeeService;
     }
 
-    @GetMapping("/max-salary")
-    public Employee findEmployeeMaxSalary(@RequestParam("departmentId") Integer departmentId) {
-        return employeeService.findEmployeeMaxSalary(departmentId);
-    }
 
-    @GetMapping("/min-salary")
-    public Employee findEmployeeMinSalary(@RequestParam("departmentId") Integer departmentId) {
-        return employeeService.findEmployeeMinSalary(departmentId);
-    }
+
+
 
 
     @GetMapping("/all")
     public Map<Integer, List<Employee>> allEmployee() {
-        return employeeService.findAllEmployee();
+        return employeeService.findAllEmployeesByDepartments();
+    }
+
+//    @GetMapping("/allDepartment")
+//    public List<Employee> allEmployeeDepartment(@RequestParam("departmentId") Integer departmentId) {
+//        return employeeService.findAllEmployeeDepartment(departmentId);
+//    }
+
+    @GetMapping("/add")
+    public Employee addEmployer(@RequestParam("name") String name,
+                                @RequestParam("departmentId") Integer departmentId,
+                                @RequestParam("salary") Integer salary) {
+        return employeeService.addEmployee(name, departmentId, salary);
     }
 }
 
