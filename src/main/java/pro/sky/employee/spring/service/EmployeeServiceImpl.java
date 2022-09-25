@@ -50,7 +50,7 @@ public class EmployeeServiceImpl implements EmployeeService {
     @Override
     public Employee removeEmployeeByKey(String key) {
         if (!employees.containsKey(key))
-            throw new RuntimeException("Данного сотрудника не существует");
+            throw new RuntimeException("Данного сотрудника не существует!");
         return employees.remove(key);
     }
 

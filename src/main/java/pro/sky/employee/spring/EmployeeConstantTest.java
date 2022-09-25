@@ -17,8 +17,8 @@ public class EmployeeConstantTest {
     public static final int MIN_SALARY = 200;
     public static final int DEPARTMENT_ID = 1;
     public static final int BAD_DEPARTMENT_ID = 2;
-    public static final Employee MAX_SALARY_EMPLOYEE = new Employee(FIRST_NAME2, SALARY, DEPARTMENT_ID);
-    public static final Employee MIN_SALARY_EMPLOYEE = new Employee(FIRST_NAME,MIN_SALARY, DEPARTMENT_ID);
+    public static final Employee MAX_SALARY_EMPLOYEE = new Employee(FIRST_NAME2, DEPARTMENT_ID, SALARY);
+    public static final Employee MIN_SALARY_EMPLOYEE = new Employee(FIRST_NAME, DEPARTMENT_ID, MIN_SALARY);
     public static final Employee DIFFERENT_DEPARTMENT_EMPLOYEE = new Employee(FIRST_NAME, SALARY, DEPARTMENT_ID);
     public static final Set<Employee> EMPLOYEES = Set.of(MIN_SALARY_EMPLOYEE, MAX_SALARY_EMPLOYEE);
     public static final Set<Employee> DIFFERENT_DEPARTMENT_EMPLOYEES = Set.of(MIN_SALARY_EMPLOYEE, DIFFERENT_DEPARTMENT_EMPLOYEE);

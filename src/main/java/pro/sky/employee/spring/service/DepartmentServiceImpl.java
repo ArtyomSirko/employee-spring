@@ -36,7 +36,6 @@ public class DepartmentServiceImpl implements DepartmentService {
         return employeeService.findAllEmployeesToCollection().stream().
                 filter(e -> e.getDepartment() == departmentId)
                 .collect(Collectors.toSet());
-
     }
 }
 

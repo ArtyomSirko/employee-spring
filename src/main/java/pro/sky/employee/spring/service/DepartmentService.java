@@ -7,9 +7,9 @@ import java.util.Set;
 
 public interface DepartmentService {
 
-    Employee findEmployeeMinSalary(Integer departmentId);
-
     Employee findEmployeeMaxSalary(Integer departmentId);
+
+    Employee findEmployeeMinSalary(Integer departmentId);
 
     Set<Employee> findAllEmployeeDepartment(Integer departmentId);
 }

@@ -1,9 +1,10 @@
 package pro.sky.employee.spring;
 
 import java.util.Objects;
- public class Employee {
+
+public class Employee {
     private String name;
-    private  int department;
+    private int department;
     private int salary;
 
     public Employee(String name, int department, int salary) {
@@ -16,7 +17,7 @@ import java.util.Objects;
         return name;
     }
 
-     public int getDepartment() {
+    public int getDepartment() {
         return department;
     }
 

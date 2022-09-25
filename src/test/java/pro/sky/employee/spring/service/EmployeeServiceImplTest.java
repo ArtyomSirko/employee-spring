@@ -69,7 +69,7 @@ class EmployeeServiceImplTest {
     }
 @Test
     void shodTrowRemoveEmployeeByKey() {
-        assertThrows(RuntimeException.class,()->out.removeEmployeeByKey(FIRST_NAME));
+    assertThrows(RuntimeException.class, () -> out.removeEmployeeByKey(FIRST_NAME));
 
     }
 

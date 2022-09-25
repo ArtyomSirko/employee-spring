@@ -8,9 +8,7 @@ import java.util.Map;
 
 public interface EmployeeService {
 
-
     Map<Integer, List<Employee>> findAllEmployeesByDepartments();
-
 
     Employee addEmployee(String name, Integer departmentId, Integer salary);
 
